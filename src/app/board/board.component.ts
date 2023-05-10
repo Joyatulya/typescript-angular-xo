@@ -9,10 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class BoardComponent implements OnInit {
   squares: any[] = Array(9).fill(null);
   xIsNext: boolean = true;
-  winner!: string;
+  winner: string | null = null;
 
   ngOnInit(): void {
-      console.log(this.squares)
       this.newGame();
   }
 
